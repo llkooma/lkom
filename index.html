@@ -21,49 +21,48 @@
             <img src="4.png" alt="이미지 4">
         </div>
 
-        <div class="form-container" style="background-color: #ffffff;">
+        <div class="form-container" id="form-section" style="background-color: #ffffff;">
             <img src="5.png" alt="이미지 5" class="left-image">
             <div class="form-section">
                 <h2>전담 마케터와 1:1로 편하게 상담하세요!</h2>
-                <form>
-                    <label for="company">담당자명</label>
-                    <input type="text" id="company" name="company" placeholder="담당자명" required>
-
-                    <label for="contact">연락처</label>
-                    <input type="text" id="contact" name="contact" placeholder="연락처" required>
-
-                    <div class="privacy-section">
-                        <input type="checkbox" id="privacy" name="privacy" required>
-                        <label for="privacy">개인정보 수집 및 이용 동의 <a href="#" id="privacy-link">[전문보기]</a></label>
-                    </div>
-
-                    <button type="submit">문의하기</button>
-                </form>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeW3lQze1oRP_hbmzAOOw1ipAn8pcRhkPdCtQkD-TDnW-3A0g/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                
+                <div class="privacy-section">
+                    <label for="privacy">폼 제출 시 개인정보 사용 동의로 간주됩니다. <a href="#" id="privacy-link">[전문보기]</a></label>
+                </div>                
             </div>
         </div>
     </div>
 
     <div class="sticky-footer" id="sticky-footer">
-        <div class="footer-form">
-            <input type="text" placeholder="담당자명" class="input-field">
-            <input type="text" placeholder="연락처" class="input-field">
-            <input type="checkbox" id="footer-privacy" name="footer-privacy">
-            <label for="footer-privacy">개인정보 수집 및 이용 동의 <a href="#" id="footer-privacy-link">[전문보기]</a></label>
-            <button type="submit" class="footer-submit">문의하기</button>
+        <div class="footer-text">
+            <span>전담 마케터와 1:1로 편하게 상담하세요!</span>
+            <button id="scroll-button" class="footer-submit">문의하기</button>
         </div>
     </div>
 
     <footer>
-        주식회사 엘케이온라인미디어 대표 : 이단윤 사업자등록번호 : 721-86-01551<br>
-        서울특별시 성동구 아차산로17, 1402호(성수동1가, 서울숲엘타워)<br>
-        이메일: lkomedia@naver.com<br>
-        COPYRIGHT ⓒ(주) 엘케이온라인미디어 CO., LTD. ALL RIGHTS RESERVED.
+        <div class="footer-content">
+            주식회사 엘케이온라인미디어 대표 : 이단윤<br>
+            사업자등록번호 : 721-86-01551<br>
+            서울특별시 성동구 아차산로17, 1402호(성수동1가, 서울숲엘타워)<br>
+            이메일: lkomedia@naver.com<br>
+            COPYRIGHT ⓒ (주) 엘케이온라인미디어 CO., LTD. ALL RIGHTS RESERVED.
+        </div>
     </footer>
 
     <div id="privacy-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <p>여기에 개인정보 수집 및 이용 동의 내용이 표시됩니다.</p>
+            <p>
+                귀하의 개인정보는 본 서비스 제공을 위해 수집됩니다. 수집된 정보는 상담 및 서비스 안내 목적으로만 사용되며, 제3자에게 제공되지 않습니다. <br>
+                수집 항목: 이름, 연락처 <br>
+                수집 목적: 상담 및 서비스 제공, 문의 대응 <br>
+                보유 기간: 동의일로부터 1년간 <br>
+                귀하는 언제든지 개인정보 제공에 대한 동의를 철회할 수 있습니다. <br>
+                자세한 내용은 당사의 개인정보 처리방침을 참고해 주십시오.
+            </p>
+            
         </div>
     </div>
 

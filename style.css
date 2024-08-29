@@ -1,3 +1,4 @@
+/* 기본 스타일 */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -29,6 +30,7 @@ img {
     align-items: center;
     border: 2px solid #e0e0e0;
     padding: 20px;
+    background-color: #ffffff; /* 배경색 추가 */
 }
 
 .left-image {
@@ -49,13 +51,13 @@ form {
 
 label {
     margin-bottom: 5px;
-    font-weight: bold; /* 레이블을 눈에 띄게 */
+    font-weight: bold;
 }
 
 input[type="text"],
 button {
     margin-bottom: 15px;
-    padding: 15px 10px; /* 입력 필드와 버튼의 패딩을 넓게 설정 */
+    padding: 15px 10px;
     font-size: 16px;
 }
 
@@ -64,7 +66,7 @@ button {
     color: white;
     border: none;
     cursor: pointer;
-    padding: 15px 20px; /* 버튼 패딩 조정 */
+    padding: 15px 20px;
 }
 
 button:hover {
@@ -87,78 +89,70 @@ button:hover {
     cursor: pointer;
 }
 
+/* 플로팅 푸터 스타일 */
 .sticky-footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background: linear-gradient(to right, #004494, #ffffff); /* 좌측 파란색, 우측 흰색 그라데이션 */
+    background: linear-gradient(to right, #004494, #ffffff);
     padding: 10px;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
+    z-index: 1000; /* 플로팅 푸터가 항상 최상단에 위치하도록 설정 */
 }
 
-.footer-form {
+.footer-text {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%; /* 폼 전체 크기를 줄이고 중앙 정렬 */
-    max-width: 1200px; /* 폼이 너무 넓어지지 않도록 설정 */
-}
-
-.input-field {
-    flex: 1; /* 입력 필드가 남은 공간을 채우도록 설정 */
-    padding: 15px;
-    margin-right: 10px;
-    border-radius: 4px;
-    border: none;
-    box-sizing: border-box; /* 패딩 포함하여 전체 너비 조절 */
-}
-
-.footer-form input[type="checkbox"] {
-    margin-right: 10px;
-}
-
-.footer-form label {
-    margin-right: 10px;
-    white-space: nowrap; /* 텍스트가 줄바꿈되지 않도록 설정 */
-}
-
-.footer-form a {
-    text-decoration: none;
-    color: inherit; /* 하이퍼링크 색상과 밑줄 제거 */
-    cursor: pointer;
+    width: 90%;
+    max-width: 1200px;
 }
 
 .footer-submit {
     background-color: white;
     color: #0056b3;
-    padding: 15px 20px; /* 버튼의 패딩을 넓게 설정 */
+    padding: 15px 20px;
     border: none;
     cursor: pointer;
-    flex-shrink: 0; /* 버튼 크기를 줄이지 않도록 설정 */
+    flex-shrink: 0;
 }
 
+.footer-text span {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/* 기존 푸터 스타일 */
 footer {
     background-color: #f2f2f2;
     text-align: center;
     padding: 20px;
     font-size: 14px;
     color: #666;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 모달 스타일 */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1001;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
     padding-top: 60px;
 }
@@ -186,6 +180,7 @@ footer {
     cursor: pointer;
 }
 
+/* 반응형 스타일 */
 @media screen and (max-width: 768px) {
     .form-container {
         flex-direction: column;
@@ -197,22 +192,20 @@ footer {
         margin-right: 0;
     }
 
-    .footer-form {
+    .footer-text {
         flex-direction: column;
         align-items: flex-start;
-        width: 100%; /* 작은 화면에서는 폼의 너비를 100%로 설정 */
-    }
-
-    .footer-form .input-group {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .footer-form input[type="text"] {
         width: 100%;
     }
 
-    .footer-form button {
+    .footer-submit {
         width: 100%;
     }
+}
+
+/* iFrame 스타일 */
+iframe {
+    width: 100%;
+    border: none;
+    margin-top: 20px;
 }
